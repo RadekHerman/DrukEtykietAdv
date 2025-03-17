@@ -26,8 +26,8 @@ namespace DrukEtykietAdv
                     Console.WriteLine("Baza przygotowana na nowe dane.");
 
                     // upload data from dostawa.csv to delivery table of database
-
                     UploadDostawaToDatabase(dostawaList, connection, command);
+                    
                     // create csv files
                     CreateCsvFiles(connection, command, towarEtykietyCsv, towarBezEtykietyCsv);
                 }

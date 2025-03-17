@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 
 namespace DrukEtykietAdv
 {
@@ -9,8 +8,7 @@ namespace DrukEtykietAdv
         static void Main(string[] args)
         {
             string configFilePath = "configTEST.json"; // TEST
-            // string configFilePath = "config.json"; //         
-            // string configFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json"); // 
+            // string configFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json"); // FINAL
 
             Config config = ConfigManager.LoadConfig(configFilePath);
 
@@ -28,8 +26,6 @@ namespace DrukEtykietAdv
                     Environment.Exit(0);
 
             }
-
         }
-
     }
 }

@@ -31,7 +31,6 @@ namespace DrukEtykietAdv
                 {
                     break;
                 }
-
                 else
                     Console.Clear();
             }
@@ -56,7 +55,6 @@ namespace DrukEtykietAdv
                 Thread.Sleep(500);
 
                 string pdfFilePath = Path.Combine(config.Paths.LabelPdf, labelName);
-                Console.WriteLine(pdfFilePath);
 
                 ExecutePrinting(pdfFilePath); //<------------ execute printing
                 Thread.Sleep(500);
@@ -142,7 +140,7 @@ namespace DrukEtykietAdv
                     foreach (ManagementObject printer in printerSearcher.Get())
                     {
                         printer.InvokeMethod("SetDefaultPrinter", null, null);
-                        Console.WriteLine($"Drukarka domyślna: {printerName}.");
+                        // Console.WriteLine($"Drukarka domyślna: {printerName}.");
                         return true;
                     }
                     Console.WriteLine("Drukarka nie znaleziona.");
@@ -192,6 +190,5 @@ namespace DrukEtykietAdv
                 Console.WriteLine($"Nieoczekiwany błąd: {ex.Message}");
             }
         }
-
     }
 }
